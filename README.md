@@ -1,1 +1,1 @@
-# Online-Groceries-App-React-Native-
+# Online Groceries App (React Native)
