@@ -13,6 +13,7 @@ const CustomButton = (props) => {
     <View style={styles.buttonItem}>
       <TouchableNativeFeedback onPress={props.onSelect}>
         <View style={{ ...styles.labelContainer, ...props.style }}>
+          {props.children}
           <Text style={styles.label}>{props.title}</Text>
         </View>
       </TouchableNativeFeedback>
@@ -23,11 +24,9 @@ const CustomButton = (props) => {
 const styles = StyleSheet.create({
   buttonItem: {
     borderRadius: 19,
-    borderTopLeftRadius: 19,
-    borderTopRightRadius: 19,
-    overflow: "hidden",
   },
   labelContainer: {
+    flexDirection: "row",
     backgroundColor: Colors.primaryColor,
     alignItems: "center",
     justifyContent: "space-evenly",
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "600",
     textAlign: "center",
-    color: "#FFFFFF",
+    color: "#FCFCFC",
   },
 });
 

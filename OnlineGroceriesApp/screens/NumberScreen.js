@@ -2,10 +2,8 @@ import React from "react";
 import { TextInput } from "react-native";
 import { Image, StyleSheet, Text, View, Dimensions } from "react-native";
 import Flags from "react-native-flags";
-import CustomButton from "../components/CustomButton";
-import Icon from "react-native-vector-icons/FontAwesome";
 
-const SignInScreen = (props) => {
+const NumberScreen = (props) => {
   return (
     <View style={styles.container}>
       <Image source={require("../assets/images/signinbg.png")} />
@@ -20,29 +18,17 @@ const SignInScreen = (props) => {
             style={styles.contactInput}
             maxLength={10}
             keyboardType="numeric"
-            onFocus={() => {
-              props.navigation.navigate("Number");
-            }}
           />
         </View>
       </View>
       <View style={styles.secondryTextContainer}>
         <Text style={styles.secondryText}>Or connect with social media</Text>
       </View>
-      <CustomButton title="Continue with Google" style={styles.googleButton}>
-        <Icon name="google" color="white" size={25} />
-      </CustomButton>
-      <CustomButton
-        title="Continue with Facebook"
-        style={styles.facebookButton}
-      >
-        <Icon name="facebook" color="white" size={25} />
-      </CustomButton>
     </View>
   );
 };
 
-SignInScreen.navigationOptions = {
+NumberScreen.navigationOptions = {
   headerShown: false,
 };
 
@@ -100,15 +86,6 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#828282",
   },
-  googleButton: {
-    backgroundColor: "#5383EC",
-    width: Dimensions.get("window").width / 1.2,
-  },
-  facebookButton: {
-    backgroundColor: "#4A66AC",
-    marginTop: Dimensions.get("window").height / 50,
-    width: Dimensions.get("window").width / 1.2,
-  },
 });
 
-export default SignInScreen;
+export default NumberScreen;

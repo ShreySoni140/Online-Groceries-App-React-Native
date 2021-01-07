@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     width: "70%",
   },
   welcomeText: {
-    fontFamily: "Gilroy-Medium",
+    fontFamily: "Gilroy-Regular",
     fontWeight: "600",
     fontSize: 48,
     textAlign: "center",
