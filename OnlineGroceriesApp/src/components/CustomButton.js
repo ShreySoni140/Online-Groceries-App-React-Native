@@ -1,22 +1,28 @@
 import React from "react";
 import {
-  Dimensions,
   StyleSheet,
   Text,
   TouchableNativeFeedback,
+  TouchableWithoutFeedback,
   View,
 } from "react-native";
-import Colors from "../constants/Colors";
+import StyleConfig from "../constants/StyleConfig";
 
 const CustomButton = (props) => {
+  let BtnCmp = TouchableNativeFeedback;
+
+  if (props.onPressFeedback == "hidden") {
+    BtnCmp = TouchableWithoutFeedback;
+  }
+
   return (
     <View style={styles.buttonItem}>
-      <TouchableNativeFeedback onPress={props.onSelect}>
+      <BtnCmp onPress={props.onSelect}>
         <View style={{ ...styles.labelContainer, ...props.style }}>
           {props.children}
           <Text style={styles.label}>{props.title}</Text>
         </View>
-      </TouchableNativeFeedback>
+      </BtnCmp>
     </View>
   );
 };
@@ -27,18 +33,18 @@ const styles = StyleSheet.create({
   },
   labelContainer: {
     flexDirection: "row",
-    backgroundColor: Colors.primaryColor,
+    backgroundColor: StyleConfig.colors.primaryColor,
     alignItems: "center",
     justifyContent: "space-evenly",
-    height: Dimensions.get("window").height / 13,
+    height: StyleConfig.height / 13,
     borderRadius: 19,
   },
   label: {
-    fontFamily: "Gilroy-Regular",
+    fontFamily: StyleConfig.fontRegular,
     fontSize: 18,
     fontWeight: "600",
     textAlign: "center",
-    color: "#FCFCFC",
+    color: StyleConfig.colors.bgColor,
   },
 });
 

@@ -1,5 +1,5 @@
 import React from "react";
-import GroceryNavigator from "./navigation/GroceryNavigator";
+import GroceryNavigator from "./src/navigation/GroceryNavigator";
 
 export default function App() {
   return <GroceryNavigator />;

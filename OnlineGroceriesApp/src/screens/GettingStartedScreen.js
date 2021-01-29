@@ -1,23 +1,17 @@
 import React from "react";
-import {
-  Text,
-  StyleSheet,
-  View,
-  Image,
-  ImageBackground,
-  Dimensions,
-} from "react-native";
+import { Text, StyleSheet, View, Image, ImageBackground } from "react-native";
 import CustomButton from "../components/CustomButton";
+import StyleConfig from "../constants/StyleConfig";
 
 const GettingStartedScreen = (props) => {
   return (
     <View style={{ flex: 1 }}>
       <ImageBackground
-        source={require("../assets/images/bgImg1.png")}
+        source={StyleConfig.images.bgGetStart}
         style={styles.bgImage}
       >
         <View style={styles.container}>
-          <Image source={require("../assets/images/logo.png")} />
+          <Image source={StyleConfig.images.logo} />
           <View style={styles.welcomeTextContainer}>
             <Text style={styles.welcomeText} numberOfLines={2}>
               Welcome to our Store
@@ -50,39 +44,37 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "flex-end",
-    marginBottom: Dimensions.get("window").height / 15,
+    marginBottom: StyleConfig.height / 15,
   },
   bgImage: {
     flex: 1,
-    width: "100%",
-    height: "100%",
   },
   welcomeTextContainer: {
-    marginTop: Dimensions.get("window").height / 50,
-    height: 86,
+    marginTop: StyleConfig.height / 50,
+    height: StyleConfig.height / 10,
     width: "70%",
   },
   welcomeText: {
-    fontFamily: "Gilroy-Regular",
+    fontFamily: StyleConfig.fontRegular,
     fontWeight: "600",
     fontSize: 48,
     textAlign: "center",
-    color: "#FFFFFF",
+    color: StyleConfig.colors.white,
   },
   captionTextContainer: {
-    marginTop: Dimensions.get("window").height / 25,
-    height: 15,
+    marginTop: StyleConfig.height / 25,
+    height: StyleConfig.height / 60,
     width: "90%",
   },
   captionText: {
-    fontFamily: "Gilroy-Medium",
+    fontFamily: StyleConfig.fontMedium,
     fontSize: 16,
     textAlign: "center",
-    color: "rgba(252, 252, 252, 0.7)",
+    color: StyleConfig.colors.captionColor,
   },
   button: {
-    marginTop: Dimensions.get("window").height / 15,
-    width: Dimensions.get("window").width / 1.2,
+    marginTop: StyleConfig.height / 15,
+    width: StyleConfig.width / 1.2,
   },
 });
 

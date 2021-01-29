@@ -5,9 +5,11 @@ import {
   TouchableWithoutFeedback,
   View,
 } from "react-native";
-import Colors from "../constants/Colors";
+import StyleConfig from "../constants/StyleConfig";
 
 const SplashScreen = (props) => {
+  // console.log(StyleConfig.height / 10);
+  // console.log(StyleConfig.width);
   return (
     <TouchableWithoutFeedback
       onPress={() => {
@@ -15,7 +17,7 @@ const SplashScreen = (props) => {
       }}
     >
       <View style={styles.container}>
-        <Image source={require("../assets/images/logo_main.png")} />
+        <Image source={StyleConfig.images.logoMain} />
       </View>
     </TouchableWithoutFeedback>
   );
@@ -28,7 +30,7 @@ SplashScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.primaryColor,
+    backgroundColor: StyleConfig.colors.primaryColor,
     alignItems: "center",
     justifyContent: "center",
   },
