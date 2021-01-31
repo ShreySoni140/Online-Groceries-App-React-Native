@@ -4,7 +4,6 @@ import {
   StyleSheet,
   Text,
   View,
-  TextInput,
   TouchableWithoutFeedback,
 } from "react-native";
 import Flags from "react-native-flags";
@@ -27,16 +26,6 @@ const SignInScreen = (props) => {
         <View style={styles.contactContainer}>
           <Flags code="IN" size={32} />
           <Text style={styles.countryCode}>+91</Text>
-          {/* <View style={styles.contactInputContainer}>
-          <TextInput
-            style={styles.contactInput}
-            maxLength={10}
-            keyboardType="numeric"
-            onFocus={() => {
-              props.navigation.navigate("Number");
-            }}
-          />
-        </View> */}
         </View>
       </TouchableWithoutFeedback>
       <View style={styles.secondryTextContainer}>
@@ -87,21 +76,11 @@ const styles = StyleSheet.create({
     height: StyleConfig.height / 20,
     marginTop: StyleConfig.height / 70,
   },
-  contactInputContainer: {
-    height: StyleConfig.height / 20,
-    width: StyleConfig.width * 0.64,
-    alignItems: "flex-start",
-  },
   countryCode: {
     fontFamily: StyleConfig.fontMedium,
     fontSize: 18,
     marginBottom: StyleConfig.height / 300,
     marginHorizontal: StyleConfig.width / 40,
-    color: StyleConfig.colors.black,
-  },
-  contactInput: {
-    fontFamily: StyleConfig.fontMedium,
-    fontSize: 18,
     color: StyleConfig.colors.black,
   },
   secondryTextContainer: {

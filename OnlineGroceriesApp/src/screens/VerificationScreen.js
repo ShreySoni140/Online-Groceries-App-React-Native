@@ -8,7 +8,6 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
-import Flags from "react-native-flags";
 import CustomButton from "../components/CustomButton";
 import Icon from "react-native-vector-icons/Ionicons";
 import StyleConfig from "../constants/StyleConfig";
@@ -31,7 +30,7 @@ const SignInScreen = (props) => {
           style={styles.backButton}
           onPressFeedback="hidden"
           onSelect={() => {
-            props.navigation.navigate("SignIn");
+            props.navigation.navigate("Number");
           }}
         >
           <Icon
@@ -42,37 +41,39 @@ const SignInScreen = (props) => {
         </CustomButton>
         <View style={styles.contentContainer}>
           <View style={styles.captionContainer}>
-            <Text style={styles.caption}>Enter your mobile number</Text>
+            <Text style={styles.caption}>Enter your 4-digit code</Text>
           </View>
           <View style={styles.secondryTextContainer}>
-            <Text style={styles.secondryText}>Mobile Number</Text>
+            <Text style={styles.secondryText}>Code</Text>
           </View>
-          <View style={styles.contactContainer}>
-            <Flags code="IN" size={32} />
-            <Text style={styles.countryCode}>+91</Text>
-            <View style={styles.contactInputContainer}>
+          <View style={styles.pinContainer}>
+            <View style={styles.pinInputContainer}>
               <TextInput
                 autoFocus
-                style={styles.contactInput}
-                maxLength={10}
+                style={styles.pinInput}
+                maxLength={4}
                 keyboardType="numeric"
+                placeholder="- - - -"
+                placeholderTextColor={StyleConfig.colors.offshadeBlack}
               />
             </View>
           </View>
         </View>
-        <View style={styles.nextButtonContainer}>
-          <CustomButton
-            style={styles.nextButton}
-            onSelect={() => {
-              props.navigation.navigate("Verification");
-            }}
-          >
-            <Icon
-              name="md-chevron-forward"
-              size={32}
-              color={StyleConfig.colors.white}
-            />
-          </CustomButton>
+        <View style={styles.footer}>
+          <TouchableWithoutFeedback>
+            <View>
+              <Text style={styles.resendCodeText}>Resend Code</Text>
+            </View>
+          </TouchableWithoutFeedback>
+          <View style={styles.nextButtonContainer}>
+            <CustomButton style={styles.nextButton}>
+              <Icon
+                name="md-chevron-forward"
+                size={32}
+                color={StyleConfig.colors.white}
+              />
+            </CustomButton>
+          </View>
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -121,32 +122,35 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: StyleConfig.colors.secondryTextColor2,
   },
-  contactContainer: {
+  pinContainer: {
     flexDirection: "row",
     alignItems: "center",
     borderBottomWidth: 2,
     borderBottomColor: StyleConfig.colors.borderColor,
   },
-  contactInputContainer: {
+  pinInputContainer: {
     height: StyleConfig.height / 20,
-    width: StyleConfig.width * 0.65,
+    width: StyleConfig.width * 0.86,
   },
-  countryCode: {
-    fontFamily: StyleConfig.fontMedium,
-    fontSize: 18,
-    marginBottom: StyleConfig.height / 300,
-    marginHorizontal: StyleConfig.width / 40,
-    color: StyleConfig.colors.offshadeBlack,
-  },
-  contactInput: {
+  pinInput: {
     fontFamily: StyleConfig.fontMedium,
     fontSize: 18,
     color: StyleConfig.colors.offshadeBlack,
   },
-  nextButtonContainer: {
-    alignItems: "flex-end",
+  footer: {
+    flexDirection: "row",
+    alignItems: "center",
     width: StyleConfig.width / 1.16,
     margin: StyleConfig.width / 15,
+  },
+  resendCodeText: {
+    fontFamily: StyleConfig.fontMedium,
+    fontSize: 18,
+    color: StyleConfig.colors.primaryColor,
+  },
+  nextButtonContainer: {
+    flex: 1,
+    alignItems: "flex-end",
   },
   nextButton: {
     borderRadius: 100,
