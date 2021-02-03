@@ -8,8 +8,6 @@ import {
 import StyleConfig from "../constants/StyleConfig";
 
 const SplashScreen = (props) => {
-  // console.log(StyleConfig.height / 10);
-  // console.log(StyleConfig.width);
   return (
     <TouchableWithoutFeedback
       onPress={() => {

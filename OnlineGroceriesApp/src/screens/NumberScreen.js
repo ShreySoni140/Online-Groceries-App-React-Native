@@ -27,6 +27,12 @@ const SignInScreen = (props) => {
           resizeMode="contain"
           blurRadius={20}
         />
+        <Image
+          style={styles.bgImage2}
+          source={StyleConfig.images.bgAllProcess}
+          resizeMode="contain"
+          blurRadius={15}
+        />
         <CustomButton
           style={styles.backButton}
           onPressFeedback="hidden"
@@ -60,19 +66,21 @@ const SignInScreen = (props) => {
             </View>
           </View>
         </View>
-        <View style={styles.nextButtonContainer}>
-          <CustomButton
-            style={styles.nextButton}
-            onSelect={() => {
-              props.navigation.navigate("Verification");
-            }}
-          >
-            <Icon
-              name="md-chevron-forward"
-              size={32}
-              color={StyleConfig.colors.white}
-            />
-          </CustomButton>
+        <View style={styles.footer}>
+          <View style={styles.nextButtonContainer}>
+            <CustomButton
+              style={styles.nextButton}
+              onSelect={() => {
+                props.navigation.navigate("Verification");
+              }}
+            >
+              <Icon
+                name="md-chevron-forward"
+                size={32}
+                color={StyleConfig.colors.white}
+              />
+            </CustomButton>
+          </View>
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -90,7 +98,12 @@ const styles = StyleSheet.create({
   },
   bgImage: {
     position: "absolute",
+    zIndex: -98,
+  },
+  bgImage2: {
+    position: "absolute",
     zIndex: -99,
+    marginTop: StyleConfig.height / 1.23,
   },
   backButton: {
     marginHorizontal: StyleConfig.width / 30,
@@ -143,10 +156,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: StyleConfig.colors.offshadeBlack,
   },
-  nextButtonContainer: {
-    alignItems: "flex-end",
-    width: StyleConfig.width / 1.16,
+  footer: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
     margin: StyleConfig.width / 15,
+  },
+  nextButtonContainer: {
+    borderRadius: 100,
+    overflow: "hidden",
   },
   nextButton: {
     borderRadius: 100,

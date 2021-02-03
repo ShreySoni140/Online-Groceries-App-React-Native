@@ -11,6 +11,7 @@ export default {
     bgColor: "#FCFCFC",
     bgColor2: "rgba(252, 252, 252, 0.6)",
     white: "#FFFFFF",
+    offWhite: "#FFF9FF",
     captionColor: "rgba(252, 252, 252, 0.7)",
     black: "#030303",
     offshadeBlack: "#181725",
@@ -33,5 +34,7 @@ export default {
     bgGetStart: require("../../assets/images/bgImg1.png"),
     bgSignIn: require("../../assets/images/signinbg.png"),
     bgNum: require("../../assets/images/signupprocessbg.png"),
+    bgAllProcess: require("../../assets/images/signupprocessbg2.png"),
+    location: require("../../assets/images/location.png"),
   },
 };

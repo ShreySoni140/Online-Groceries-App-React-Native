@@ -15,31 +15,44 @@ const SignInScreen = (props) => {
   return (
     <View style={styles.container}>
       <Image source={StyleConfig.images.bgSignIn} />
-      <View style={styles.captionContainer}>
-        <Text style={styles.caption}>Get your groceries with nectar</Text>
-      </View>
-      <TouchableWithoutFeedback
-        onPress={() => {
-          props.navigation.navigate("Number");
-        }}
-      >
-        <View style={styles.contactContainer}>
-          <Flags code="IN" size={32} />
-          <Text style={styles.countryCode}>+91</Text>
+      <View style={{ width: StyleConfig.width / 1.2 }}>
+        <View style={styles.captionContainer}>
+          <Text style={styles.caption}>Get your groceries with nectar</Text>
         </View>
-      </TouchableWithoutFeedback>
-      <View style={styles.secondryTextContainer}>
-        <Text style={styles.secondryText}>Or connect with social media</Text>
+        <TouchableWithoutFeedback
+          onPress={() => {
+            props.navigation.navigate("Number");
+          }}
+        >
+          <View style={styles.contactContainer}>
+            <Flags code="IN" size={32} />
+            <Text style={styles.countryCode}>+91</Text>
+          </View>
+        </TouchableWithoutFeedback>
+        <View style={styles.secondryTextContainer}>
+          <Text style={styles.secondryText}>Or connect with social media</Text>
+        </View>
+        <View style={styles.footer}>
+          <CustomButton
+            title="Continue with Google"
+            style={styles.googleButton}
+          >
+            <Icon name="google" color="white" size={25} />
+          </CustomButton>
+          <CustomButton
+            title="Continue with Facebook"
+            style={styles.facebookButton}
+          >
+            <Icon name="facebook" color="white" size={25} />
+          </CustomButton>
+        </View>
       </View>
-      <CustomButton title="Continue with Google" style={styles.googleButton}>
-        <Icon name="google" color="white" size={25} />
-      </CustomButton>
-      <CustomButton
-        title="Continue with Facebook"
-        style={styles.facebookButton}
-      >
-        <Icon name="facebook" color="white" size={25} />
-      </CustomButton>
+      <Image
+        style={styles.bgImage}
+        source={StyleConfig.images.bgAllProcess}
+        resizeMode="contain"
+        blurRadius={15}
+      />
     </View>
   );
 };
@@ -52,14 +65,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "flex-start",
     backgroundColor: StyleConfig.colors.bgColor,
   },
   captionContainer: {
-    alignSelf: "flex-start",
     width: StyleConfig.width / 1.6,
-    marginLeft: StyleConfig.width / 15,
-    marginTop: StyleConfig.height / 15,
+    marginTop: StyleConfig.height / 20,
   },
   caption: {
     fontFamily: StyleConfig.fontRegular,
@@ -72,14 +82,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderBottomWidth: 2,
     borderBottomColor: StyleConfig.colors.borderColor,
-    width: StyleConfig.width / 1.2,
-    height: StyleConfig.height / 20,
     marginTop: StyleConfig.height / 70,
   },
   countryCode: {
     fontFamily: StyleConfig.fontMedium,
     fontSize: 18,
-    marginBottom: StyleConfig.height / 300,
     marginHorizontal: StyleConfig.width / 40,
     color: StyleConfig.colors.black,
   },
@@ -91,15 +98,22 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "600",
     color: StyleConfig.colors.secondryTextColor,
+    textAlign: "center",
+  },
+  footer: {
+    height: StyleConfig.height / 5.5,
+    justifyContent: "space-between",
   },
   googleButton: {
     backgroundColor: StyleConfig.colors.google,
-    width: StyleConfig.width / 1.2,
   },
   facebookButton: {
     backgroundColor: StyleConfig.colors.facebook,
-    marginTop: StyleConfig.height / 50,
-    width: StyleConfig.width / 1.2,
+  },
+  bgImage: {
+    position: "absolute",
+    zIndex: -99,
+    marginTop: StyleConfig.height / 1.23,
   },
 });
 

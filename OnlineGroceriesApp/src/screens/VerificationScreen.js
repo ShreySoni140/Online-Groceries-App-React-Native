@@ -26,6 +26,12 @@ const SignInScreen = (props) => {
           resizeMode="contain"
           blurRadius={20}
         />
+        <Image
+          style={styles.bgImage2}
+          source={StyleConfig.images.bgAllProcess}
+          resizeMode="contain"
+          blurRadius={15}
+        />
         <CustomButton
           style={styles.backButton}
           onPressFeedback="hidden"
@@ -61,12 +67,17 @@ const SignInScreen = (props) => {
         </View>
         <View style={styles.footer}>
           <TouchableWithoutFeedback>
-            <View>
+            <View style={styles.resendCodeTextContainer}>
               <Text style={styles.resendCodeText}>Resend Code</Text>
             </View>
           </TouchableWithoutFeedback>
           <View style={styles.nextButtonContainer}>
-            <CustomButton style={styles.nextButton}>
+            <CustomButton
+              style={styles.nextButton}
+              onSelect={() => {
+                props.navigation.navigate("SelectLocation");
+              }}
+            >
               <Icon
                 name="md-chevron-forward"
                 size={32}
@@ -92,6 +103,11 @@ const styles = StyleSheet.create({
   bgImage: {
     position: "absolute",
     zIndex: -99,
+  },
+  bgImage2: {
+    position: "absolute",
+    zIndex: -99,
+    marginTop: StyleConfig.height / 1.23,
   },
   backButton: {
     marginHorizontal: StyleConfig.width / 30,
@@ -140,8 +156,10 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: "row",
     alignItems: "center",
-    width: StyleConfig.width / 1.16,
     margin: StyleConfig.width / 15,
+  },
+  resendCodeTextContainer: {
+    flex: 1,
   },
   resendCodeText: {
     fontFamily: StyleConfig.fontMedium,
@@ -149,8 +167,8 @@ const styles = StyleSheet.create({
     color: StyleConfig.colors.primaryColor,
   },
   nextButtonContainer: {
-    flex: 1,
-    alignItems: "flex-end",
+    borderRadius: 100,
+    overflow: "hidden",
   },
   nextButton: {
     borderRadius: 100,

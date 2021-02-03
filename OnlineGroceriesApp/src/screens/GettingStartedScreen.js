@@ -12,23 +12,28 @@ const GettingStartedScreen = (props) => {
       >
         <View style={styles.container}>
           <Image source={StyleConfig.images.logo} />
-          <View style={styles.welcomeTextContainer}>
-            <Text style={styles.welcomeText} numberOfLines={2}>
-              Welcome to our Store
-            </Text>
+          <View style={styles.contentContainer}>
+            <View style={styles.welcomeTextContainer}>
+              <Text style={styles.welcomeText} numberOfLines={2}>
+                Welcome to our Store
+              </Text>
+            </View>
+            <View style={styles.captionTextContainer}>
+              <Text style={styles.captionText}>
+                Get your groceries in as fast as one hour
+              </Text>
+            </View>
+            <View style={styles.footer}>
+              <CustomButton
+                title="Get Started"
+                style={{ color: StyleConfig.colors.offWhite }}
+                buttonItemStyle={{ flex: 1 }}
+                onSelect={() => {
+                  props.navigation.navigate("SignIn");
+                }}
+              />
+            </View>
           </View>
-          <View style={styles.captionTextContainer}>
-            <Text style={styles.captionText}>
-              Get your groceries in as fast as one hour
-            </Text>
-          </View>
-          <CustomButton
-            title="Get Started"
-            style={styles.button}
-            onSelect={() => {
-              props.navigation.navigate("SignIn");
-            }}
-          />
         </View>
       </ImageBackground>
     </View>
@@ -44,15 +49,19 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "flex-end",
-    marginBottom: StyleConfig.height / 15,
+    marginBottom: StyleConfig.height / 20,
   },
   bgImage: {
     flex: 1,
   },
+  contentContainer: {
+    height: StyleConfig.height / 3,
+    marginHorizontal: StyleConfig.width / 15,
+    justifyContent: "space-around",
+    alignItems: "center",
+  },
   welcomeTextContainer: {
-    marginTop: StyleConfig.height / 50,
-    height: StyleConfig.height / 10,
-    width: "70%",
+    width: StyleConfig.width / 1.45,
   },
   welcomeText: {
     fontFamily: StyleConfig.fontRegular,
@@ -62,9 +71,7 @@ const styles = StyleSheet.create({
     color: StyleConfig.colors.white,
   },
   captionTextContainer: {
-    marginTop: StyleConfig.height / 25,
-    height: StyleConfig.height / 60,
-    width: "90%",
+    marginTop: -StyleConfig.height / 30,
   },
   captionText: {
     fontFamily: StyleConfig.fontMedium,
@@ -72,9 +79,10 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: StyleConfig.colors.captionColor,
   },
-  button: {
-    marginTop: StyleConfig.height / 15,
-    width: StyleConfig.width / 1.2,
+  footer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: StyleConfig.width / 15,
   },
 });
 

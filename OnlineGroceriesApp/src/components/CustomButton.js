@@ -16,11 +16,13 @@ const CustomButton = (props) => {
   }
 
   return (
-    <View style={styles.buttonItem}>
+    <View style={{ ...styles.buttonItem, ...props.buttonItemStyle }}>
       <BtnCmp onPress={props.onSelect}>
         <View style={{ ...styles.labelContainer, ...props.style }}>
           {props.children}
-          <Text style={styles.label}>{props.title}</Text>
+          <Text style={{ ...styles.label, ...props.titleStyle }}>
+            {props.title}
+          </Text>
         </View>
       </BtnCmp>
     </View>
@@ -30,6 +32,7 @@ const CustomButton = (props) => {
 const styles = StyleSheet.create({
   buttonItem: {
     borderRadius: 19,
+    overflow: "hidden",
   },
   labelContainer: {
     flexDirection: "row",
