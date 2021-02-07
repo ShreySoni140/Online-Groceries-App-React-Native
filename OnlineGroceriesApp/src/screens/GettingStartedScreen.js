@@ -3,7 +3,7 @@ import { Text, StyleSheet, View, Image, ImageBackground } from "react-native";
 import CustomButton from "../components/CustomButton";
 import StyleConfig from "../constants/StyleConfig";
 
-const GettingStartedScreen = (props) => {
+const GettingStartedScreen = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
       <ImageBackground
@@ -29,7 +29,7 @@ const GettingStartedScreen = (props) => {
                 style={{ color: StyleConfig.colors.offWhite }}
                 buttonItemStyle={{ flex: 1 }}
                 onSelect={() => {
-                  props.navigation.navigate("SignIn");
+                  navigation.navigate("SignIn");
                 }}
               />
             </View>
@@ -38,10 +38,6 @@ const GettingStartedScreen = (props) => {
       </ImageBackground>
     </View>
   );
-};
-
-GettingStartedScreen.navigationOptions = {
-  headerShown: false,
 };
 
 const styles = StyleSheet.create({

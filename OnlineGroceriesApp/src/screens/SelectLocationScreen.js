@@ -12,9 +12,7 @@ import CustomButton from "../components/CustomButton";
 import Icon from "react-native-vector-icons/Ionicons";
 import StyleConfig from "../constants/StyleConfig";
 
-const SignInScreen = (props) => {
-  //   console.log(StyleConfig.height / 55);
-  //   console.log(StyleConfig.width);
+const SelectLocationScreen = ({ navigation }) => {
   let data = [
     { label: "1", value: "A" },
     { label: "2", value: "B" },
@@ -45,7 +43,7 @@ const SignInScreen = (props) => {
             style={styles.backButton}
             onPressFeedback="hidden"
             onSelect={() => {
-              props.navigation.navigate("Verification");
+              navigation.goBack();
             }}
           >
             <Icon
@@ -55,13 +53,7 @@ const SignInScreen = (props) => {
             />
           </CustomButton>
         </View>
-        <View
-          style={{
-            flex: 1,
-            marginHorizontal: StyleConfig.width / 25,
-            alignItems: "center",
-          }}
-        >
+        <View style={styles.topImage}>
           <Image
             style={{ flex: 1 }}
             source={StyleConfig.images.location}
@@ -77,18 +69,20 @@ const SignInScreen = (props) => {
         </View>
 
         <View style={styles.contentContainer}>
-          <View>
+          <View style={styles.pickerContainer}>
+            <Text style={styles.pickerTitle}>Your Zone</Text>
             <RNPickerSelect
-              placeholder={{ label: "Select your Zone",value="null" }}
+              placeholder={{ label: "Select your Zone", value: "null" }}
               items={data}
               onValueChange={(label) => {
                 console.log(label);
               }}
             />
           </View>
-          <View>
+          <View style={styles.pickerContainer}>
+            <Text style={styles.pickerTitle}>Your Area</Text>
             <RNPickerSelect
-              placeholder={{ label: "Select your Zone" }}
+              placeholder={{ label: "Types of your area", value: "null" }}
               items={data}
               onValueChange={(label) => {
                 console.log(label);
@@ -101,15 +95,14 @@ const SignInScreen = (props) => {
             title="Submit"
             titleStyle={{ color: StyleConfig.colors.offWhite }}
             buttonItemStyle={{ flex: 1 }}
+            onSelect={() => {
+              navigation.navigate("LogIn");
+            }}
           />
         </View>
       </View>
     </TouchableWithoutFeedback>
   );
-};
-
-SignInScreen.navigationOptions = {
-  headerShown: false,
 };
 
 const styles = StyleSheet.create({
@@ -135,11 +128,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "transparent",
   },
+  topImage: {
+    flex: 1,
+    marginHorizontal: StyleConfig.width / 25,
+    alignItems: "center",
+  },
   contentContainer: {
     flex: 1,
     marginHorizontal: StyleConfig.width / 15,
-    // borderColor: "blue",
-    // borderWidth: 3,
     justifyContent: "flex-end",
   },
   caption: {
@@ -158,11 +154,24 @@ const styles = StyleSheet.create({
     color: StyleConfig.colors.secondryTextColor2,
     textAlign: "center",
   },
+  pickerContainer: {
+    borderBottomWidth: 1,
+    borderColor: StyleConfig.colors.borderColor,
+    borderStyle: "solid",
+    marginBottom: StyleConfig.height / 35,
+  },
+  pickerTitle: {
+    fontFamily: StyleConfig.fontRegular,
+    fontSize: 16,
+    fontWeight: "600",
+    color: StyleConfig.colors.secondryTextColor2,
+  },
   footer: {
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "flex-start",
     margin: StyleConfig.width / 15,
+    flex: 0.4,
   },
 });
 
-export default SignInScreen;
+export default SelectLocationScreen;

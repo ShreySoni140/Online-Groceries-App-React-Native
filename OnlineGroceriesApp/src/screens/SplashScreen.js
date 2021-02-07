@@ -7,22 +7,16 @@ import {
 } from "react-native";
 import StyleConfig from "../constants/StyleConfig";
 
-const SplashScreen = (props) => {
+const SplashScreen = ({ navigation }) => {
   return (
     <TouchableWithoutFeedback
-      onPress={() => {
-        props.navigation.navigate("GettingStarted");
-      }}
+      onPress={() => navigation.navigate("GettingStarted")}
     >
       <View style={styles.container}>
         <Image source={StyleConfig.images.logoMain} />
       </View>
     </TouchableWithoutFeedback>
   );
-};
-
-SplashScreen.navigationOptions = {
-  headerShown: false,
 };
 
 const styles = StyleSheet.create({

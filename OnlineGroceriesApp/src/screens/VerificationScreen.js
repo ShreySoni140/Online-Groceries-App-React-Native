@@ -12,7 +12,7 @@ import CustomButton from "../components/CustomButton";
 import Icon from "react-native-vector-icons/Ionicons";
 import StyleConfig from "../constants/StyleConfig";
 
-const SignInScreen = (props) => {
+const VerificationScreen = ({ navigation }) => {
   return (
     <TouchableWithoutFeedback
       onPress={() => {
@@ -36,7 +36,7 @@ const SignInScreen = (props) => {
           style={styles.backButton}
           onPressFeedback="hidden"
           onSelect={() => {
-            props.navigation.navigate("Number");
+            navigation.goBack();
           }}
         >
           <Icon
@@ -75,7 +75,7 @@ const SignInScreen = (props) => {
             <CustomButton
               style={styles.nextButton}
               onSelect={() => {
-                props.navigation.navigate("SelectLocation");
+                navigation.navigate("SelectLocation");
               }}
             >
               <Icon
@@ -89,10 +89,6 @@ const SignInScreen = (props) => {
       </View>
     </TouchableWithoutFeedback>
   );
-};
-
-SignInScreen.navigationOptions = {
-  headerShown: false,
 };
 
 const styles = StyleSheet.create({
@@ -139,9 +135,9 @@ const styles = StyleSheet.create({
     color: StyleConfig.colors.secondryTextColor2,
   },
   pinContainer: {
-    flexDirection: "row",
+    // flexDirection: "row",
     alignItems: "center",
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     borderBottomColor: StyleConfig.colors.borderColor,
   },
   pinInputContainer: {
@@ -177,4 +173,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignInScreen;
+export default VerificationScreen;

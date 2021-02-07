@@ -11,7 +11,7 @@ import CustomButton from "../components/CustomButton";
 import Icon from "react-native-vector-icons/FontAwesome";
 import StyleConfig from "../constants/StyleConfig";
 
-const SignInScreen = (props) => {
+const SignInScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image source={StyleConfig.images.bgSignIn} />
@@ -21,7 +21,7 @@ const SignInScreen = (props) => {
         </View>
         <TouchableWithoutFeedback
           onPress={() => {
-            props.navigation.navigate("Number");
+            navigation.navigate("Number");
           }}
         >
           <View style={styles.contactContainer}>
@@ -55,10 +55,6 @@ const SignInScreen = (props) => {
       />
     </View>
   );
-};
-
-SignInScreen.navigationOptions = {
-  headerShown: false,
 };
 
 const styles = StyleSheet.create({

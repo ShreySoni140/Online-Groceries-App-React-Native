@@ -20,6 +20,7 @@ export default {
     borderColor: "#E2E2E2",
     secondryTextColor: "#828282",
     secondryTextColor2: "#7C7C7C",
+    placeholderColor: "#CCC",
   },
 
   fontLight: "Gilroy-Light",
@@ -36,5 +37,6 @@ export default {
     bgNum: require("../../assets/images/signupprocessbg.png"),
     bgAllProcess: require("../../assets/images/signupprocessbg2.png"),
     location: require("../../assets/images/location.png"),
+    logoColor: require("../../assets/images/colorlogo.png"),
   },
 };
