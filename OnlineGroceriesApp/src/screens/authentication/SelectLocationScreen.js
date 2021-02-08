@@ -8,9 +8,9 @@ import {
   Keyboard,
 } from "react-native";
 import RNPickerSelect from "react-native-picker-select";
-import CustomButton from "../components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 import Icon from "react-native-vector-icons/Ionicons";
-import StyleConfig from "../constants/StyleConfig";
+import StyleConfig from "../../constants/StyleConfig";
 
 const SelectLocationScreen = ({ navigation }) => {
   let data = [

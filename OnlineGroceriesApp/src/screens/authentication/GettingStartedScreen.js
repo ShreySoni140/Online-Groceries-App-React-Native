@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, StyleSheet, View, Image, ImageBackground } from "react-native";
-import CustomButton from "../components/CustomButton";
-import StyleConfig from "../constants/StyleConfig";
+import CustomButton from "../../components/CustomButton";
+import StyleConfig from "../../constants/StyleConfig";
 
 const GettingStartedScreen = ({ navigation }) => {
   return (

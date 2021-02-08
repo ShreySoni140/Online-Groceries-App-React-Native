@@ -8,11 +8,12 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
-import CustomButton from "../components/CustomButton";
+import Flags from "react-native-flags";
+import CustomButton from "../../components/CustomButton";
 import Icon from "react-native-vector-icons/Ionicons";
-import StyleConfig from "../constants/StyleConfig";
+import StyleConfig from "../../constants/StyleConfig";
 
-const VerificationScreen = ({ navigation }) => {
+const NumberScreen = ({ navigation }) => {
   return (
     <TouchableWithoutFeedback
       onPress={() => {
@@ -47,35 +48,30 @@ const VerificationScreen = ({ navigation }) => {
         </CustomButton>
         <View style={styles.contentContainer}>
           <View style={styles.captionContainer}>
-            <Text style={styles.caption}>Enter your 4-digit code</Text>
+            <Text style={styles.caption}>Enter your mobile number</Text>
           </View>
           <View style={styles.secondryTextContainer}>
-            <Text style={styles.secondryText}>Code</Text>
+            <Text style={styles.secondryText}>Mobile Number</Text>
           </View>
-          <View style={styles.pinContainer}>
-            <View style={styles.pinInputContainer}>
+          <View style={styles.contactContainer}>
+            <Flags code="IN" size={32} />
+            <Text style={styles.countryCode}>+91</Text>
+            <View style={styles.contactInputContainer}>
               <TextInput
                 autoFocus
-                style={styles.pinInput}
-                maxLength={4}
+                style={styles.contactInput}
+                maxLength={10}
                 keyboardType="numeric"
-                placeholder="- - - -"
-                placeholderTextColor={StyleConfig.colors.offshadeBlack}
               />
             </View>
           </View>
         </View>
         <View style={styles.footer}>
-          <TouchableWithoutFeedback>
-            <View style={styles.resendCodeTextContainer}>
-              <Text style={styles.resendCodeText}>Resend Code</Text>
-            </View>
-          </TouchableWithoutFeedback>
           <View style={styles.nextButtonContainer}>
             <CustomButton
               style={styles.nextButton}
               onSelect={() => {
-                navigation.navigate("SelectLocation");
+                navigation.navigate("Verification");
               }}
             >
               <Icon
@@ -98,7 +94,7 @@ const styles = StyleSheet.create({
   },
   bgImage: {
     position: "absolute",
-    zIndex: -99,
+    zIndex: -98,
   },
   bgImage2: {
     position: "absolute",
@@ -134,33 +130,32 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: StyleConfig.colors.secondryTextColor2,
   },
-  pinContainer: {
-    // flexDirection: "row",
+  contactContainer: {
+    flexDirection: "row",
     alignItems: "center",
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     borderBottomColor: StyleConfig.colors.borderColor,
   },
-  pinInputContainer: {
+  contactInputContainer: {
     height: StyleConfig.height / 20,
-    width: StyleConfig.width * 0.86,
+    width: StyleConfig.width * 0.65,
   },
-  pinInput: {
+  countryCode: {
+    fontFamily: StyleConfig.fontMedium,
+    fontSize: 18,
+    marginBottom: StyleConfig.height / 300,
+    marginHorizontal: StyleConfig.width / 40,
+    color: StyleConfig.colors.offshadeBlack,
+  },
+  contactInput: {
     fontFamily: StyleConfig.fontMedium,
     fontSize: 18,
     color: StyleConfig.colors.offshadeBlack,
   },
   footer: {
     flexDirection: "row",
-    alignItems: "center",
+    justifyContent: "flex-end",
     margin: StyleConfig.width / 15,
-  },
-  resendCodeTextContainer: {
-    flex: 1,
-  },
-  resendCodeText: {
-    fontFamily: StyleConfig.fontMedium,
-    fontSize: 18,
-    color: StyleConfig.colors.primaryColor,
   },
   nextButtonContainer: {
     borderRadius: 100,
@@ -173,4 +168,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default VerificationScreen;
+export default NumberScreen;

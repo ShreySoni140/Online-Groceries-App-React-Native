@@ -9,9 +9,9 @@ import {
   TextInput,
   KeyboardAvoidingView,
 } from "react-native";
-import CustomButton from "../components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 import Icon from "react-native-vector-icons/Ionicons";
-import StyleConfig from "../constants/StyleConfig";
+import StyleConfig from "../../constants/StyleConfig";
 import { ScrollView } from "react-native-gesture-handler";
 
 const LogInScreen = ({ navigation }) => {

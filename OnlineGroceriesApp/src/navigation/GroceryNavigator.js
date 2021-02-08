@@ -2,15 +2,15 @@ import "react-native-gesture-handler";
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import GettingStartedScreen from "../screens/GettingStartedScreen";
-import SignInScreen from "../screens/SignInScreen";
-import SplashScreen from "../screens/SplashScreen";
-import NumberScreen from "../screens/NumberScreen";
-import VerificationScreen from "../screens/VerificationScreen";
-import SelectLocationScreen from "../screens/SelectLocationScreen";
-import LogInScreen from "../screens/LogInScreen";
-import SignUpScreen from "../screens/SignUpScreen";
-import HomeScreen from "../screens/HomeScreen";
+import GettingStartedScreen from "../screens/authentication/GettingStartedScreen";
+import SignInScreen from "../screens/authentication/SignInScreen";
+import SplashScreen from "../screens/authentication/SplashScreen";
+import NumberScreen from "../screens/authentication/NumberScreen";
+import VerificationScreen from "../screens/authentication/VerificationScreen";
+import SelectLocationScreen from "../screens/authentication/SelectLocationScreen";
+import LogInScreen from "../screens/authentication/LogInScreen";
+import SignUpScreen from "../screens/authentication/SignUpScreen";
+import HomeScreen from "../screens/main_app/HomeScreen";
 
 const Stack = createStackNavigator();
 
@@ -24,7 +24,7 @@ const GroceryNavigator = () => {
         <Stack.Screen name="Number" component={NumberScreen} />
         <Stack.Screen name="Verification" component={VerificationScreen} />
         <Stack.Screen name="SelectLocation" component={SelectLocationScreen} /> */}
-        <Stack.Screen name="LogIn" component={LogInScreen} />
+        {/* <Stack.Screen name="LogIn" component={LogInScreen} /> */}
         <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>

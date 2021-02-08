@@ -7,9 +7,9 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import Flags from "react-native-flags";
-import CustomButton from "../components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 import Icon from "react-native-vector-icons/FontAwesome";
-import StyleConfig from "../constants/StyleConfig";
+import StyleConfig from "../../constants/StyleConfig";
 
 const SignInScreen = ({ navigation }) => {
   return (

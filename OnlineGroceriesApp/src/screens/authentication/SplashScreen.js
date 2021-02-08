@@ -5,7 +5,7 @@ import {
   TouchableWithoutFeedback,
   View,
 } from "react-native";
-import StyleConfig from "../constants/StyleConfig";
+import StyleConfig from "../../constants/StyleConfig";
 
 const SplashScreen = ({ navigation }) => {
   return (
