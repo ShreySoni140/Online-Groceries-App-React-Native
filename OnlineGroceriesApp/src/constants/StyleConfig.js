@@ -38,5 +38,12 @@ export default {
     bgAllProcess: require("../../assets/images/signupprocessbg2.png"),
     location: require("../../assets/images/location.png"),
     logoColor: require("../../assets/images/colorlogo.png"),
+    banana: require("../../assets/images/banana.png"),
+    apple: require("../../assets/images/apple.png"),
+    redBellPepper: require("../../assets/images/redbellpepper.png"),
+    ginger: require("../../assets/images/ginger.png"),
+    beefBone: require("../../assets/images/beefbone.png"),
+    broilerChicken: require("../../assets/images/broilerchicken.png"),
+    orderAccepted: require("../../assets/images/accept.png"),
   },
 };

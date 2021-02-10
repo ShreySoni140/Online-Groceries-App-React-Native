@@ -46,9 +46,7 @@ const LogInScreen = ({ navigation }) => {
           </View>
 
           <View style={styles.contentContainer}>
-            <View style={styles.captionContainer}>
-              <Text style={styles.caption}>Log In</Text>
-            </View>
+            <Text style={styles.caption}>Log In</Text>
             <View style={styles.secondryTextContainer}>
               <Text style={styles.secondryText}>
                 Enter your emails and password
@@ -97,7 +95,7 @@ const LogInScreen = ({ navigation }) => {
               titleStyle={{ color: StyleConfig.colors.offWhite }}
               buttonItemStyle={{ flex: 1 }}
               onSelect={() => {
-                navigation.navigate("Home");
+                navigation.navigate("Main", { screen: "MainTabNavigator" });
               }}
             />
           </View>
@@ -135,15 +133,6 @@ const styles = StyleSheet.create({
     zIndex: -99,
     marginTop: StyleConfig.height / 1.23,
   },
-  header: {
-    flexDirection: "row",
-  },
-  backButton: {
-    marginHorizontal: StyleConfig.width / 30,
-    width: StyleConfig.width / 10,
-    justifyContent: "center",
-    backgroundColor: "transparent",
-  },
   topImage: {
     marginHorizontal: StyleConfig.width / 15,
     marginTop: StyleConfig.height / 12,
@@ -151,8 +140,6 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     marginHorizontal: StyleConfig.width / 15,
-  },
-  captionContainer: {
     marginTop: StyleConfig.height / 8,
   },
   caption: {
