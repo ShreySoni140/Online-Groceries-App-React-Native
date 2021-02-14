@@ -1,5 +1,6 @@
 import "react-native-gesture-handler";
 import * as React from "react";
+import { StyleSheet, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
@@ -67,64 +68,64 @@ const MainTabNavigator = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarLabel: "Shop",
-          tabBarIcon: (tabInfo) => {
-            return <Entypo name="shop" size={24} color={tabInfo.color} />;
+          tabBarIcon: ({ color }) => {
+            return <Entypo name="shop" size={24} color={color} />;
           },
+          tabBarLabel: <Text style={styles.tabLabel}>Shop</Text>,
         }}
       />
       <Tab.Screen
         name="Explore"
         component={ExploreScreen}
         options={{
-          tabBarIcon: (tabInfo) => {
+          tabBarIcon: ({ color }) => {
             return (
               <MaterialCommunityIcons
                 name="text-search"
                 size={24}
-                color={tabInfo.color}
+                color={color}
               />
             );
           },
+          tabBarLabel: <Text style={styles.tabLabel}>Explore</Text>,
         }}
       />
       <Tab.Screen
         name="Cart"
         component={CartScreen}
         options={{
-          tabBarIcon: (tabInfo) => {
+          tabBarIcon: ({ color }) => {
             return (
               <MaterialCommunityIcons
                 name="cart-outline"
                 size={24}
-                color={tabInfo.color}
+                color={color}
               />
             );
           },
+          tabBarLabel: <Text style={styles.tabLabel}>Cart</Text>,
         }}
       />
       <Tab.Screen
         name="Favorite"
         component={FavoritesScreen}
         options={{
-          tabBarIcon: (tabInfo) => {
+          tabBarIcon: ({ color }) => {
             return (
-              <MaterialIcons
-                name="favorite-border"
-                size={24}
-                color={tabInfo.color}
-              />
+              <MaterialIcons name="favorite-border" size={24} color={color} />
             );
           },
+          tabBarLabel: <Text style={styles.tabLabel}>Favorite</Text>,
         }}
       />
       <Tab.Screen
         name="Account"
         component={AccountScreen}
         options={{
-          tabBarIcon: (tabInfo) => {
-            return <FontAwesome5 name="user" size={24} color={tabInfo.color} />;
+          tabBarIcon: ({ color }) => {
+            return <FontAwesome5 name="user" size={24} color={color} />;
           },
+          tabBarLabel: <Text style={styles.tabLabel}>Account</Text>,
         }}
       />
     </Tab.Navigator>
@@ -151,12 +152,20 @@ const GroceryNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="OrderAcc" component={OrderAcceptedScreen} />
+        {/* <Stack.Screen name="OrderAcc" component={OrderAcceptedScreen} /> */}
         <Stack.Screen name="Auth" component={AuthNavigator} />
         <Stack.Screen name="Main" component={MainNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
+
+const styles = StyleSheet.create({
+  tabLabel: {
+    fontFamily: StyleConfig.fontRegular,
+    fontSize: 12,
+    color: StyleConfig.colors.offshadeBlack,
+  },
+});
 
 export default GroceryNavigator;
