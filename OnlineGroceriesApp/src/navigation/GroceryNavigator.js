@@ -153,7 +153,7 @@ const GroceryNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {/* <Stack.Screen name="OrderAcc" component={OrderAcceptedScreen} /> */}
-        <Stack.Screen name="Auth" component={AuthNavigator} />
+        {/* <Stack.Screen name="Auth" component={AuthNavigator} /> */}
         <Stack.Screen name="Main" component={MainNavigator} />
       </Stack.Navigator>
     </NavigationContainer>

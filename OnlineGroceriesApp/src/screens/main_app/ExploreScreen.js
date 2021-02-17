@@ -3,18 +3,31 @@ import { FlatList } from "react-native";
 import { StyleSheet, Text, View } from "react-native";
 import SearchBar from "../../components/SearchBar";
 import StyleConfig from "../../constants/StyleConfig";
-import CategoryTile from "../../components/CategoryTile";
+import Tile from "../../components/Tile";
 import { CATEGORIES } from "../../data/dummy_data";
 
 const ExploreScreen = (props) => {
   const renderTileItem = (itemData) => {
     return (
-      <CategoryTile
+      <Tile
         title={itemData.item.title}
-        color={itemData.item.color}
-        borderColor={itemData.item.border}
+        gridItemStyle={{
+          marginTop: StyleConfig.height / 70,
+          marginLeft: StyleConfig.width / 35,
+          height: StyleConfig.height / 4.5,
+        }}
+        containerStyle={{
+          backgroundColor: itemData.item.color,
+          borderColor: itemData.item.border,
+        }}
+        titleStyle={{ marginHorizontal: StyleConfig.width / 35 }}
         image={itemData.item.image}
-        onSelect={() => {}}
+        onSelect={() => {
+          props.navigation.navigate("Main", {
+            screen: "ExploreDetail",
+            params: { catagoryId: itemData.item.id },
+          });
+        }}
       />
     );
   };

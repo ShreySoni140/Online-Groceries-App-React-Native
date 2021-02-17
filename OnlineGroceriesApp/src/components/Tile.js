@@ -8,20 +8,28 @@ import {
 } from "react-native";
 import StyleConfig from "../constants/StyleConfig";
 
-const CategoryTile = (props) => {
+const Tile = (props) => {
   return (
-    <View style={styles.gridItem}>
+    <View style={{ ...styles.gridItem, ...props.gridItemStyle }}>
       <TouchableNativeFeedback onPress={props.onSelect}>
         <View
           style={{
             ...styles.container,
-            ...{ backgroundColor: props.color, borderColor: props.borderColor },
+            ...props.containerStyle,
           }}
         >
-          <Image source={props.image} resizeMode="contain" />
-          <Text style={styles.title} numberOfLines={2}>
+          <Image
+            source={props.image}
+            resizeMode="contain"
+            style={props.imageStyle}
+          />
+          <Text
+            style={{ ...styles.title, ...props.titleStyle }}
+            numberOfLines={2}
+          >
             {props.title}
           </Text>
+          {props.children}
         </View>
       </TouchableNativeFeedback>
     </View>
@@ -31,9 +39,6 @@ const CategoryTile = (props) => {
 const styles = StyleSheet.create({
   gridItem: {
     flex: 1,
-    marginTop: StyleConfig.height / 70,
-    marginLeft: StyleConfig.width / 35,
-    height: StyleConfig.height / 4.5,
     borderRadius: 18,
     overflow: "hidden",
   },
@@ -49,8 +54,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: "center",
     textAlignVertical: "center",
-    marginHorizontal: StyleConfig.width / 35,
   },
 });
 
-export default CategoryTile;
+export default Tile;

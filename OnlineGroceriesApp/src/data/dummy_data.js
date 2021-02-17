@@ -60,51 +60,96 @@ export const PRODUCTS = [
     "Organic Banana",
     "7pcs, Price",
     4.99,
-    StyleConfig.images.banana
+    StyleConfig.images.banana,
+    "c1"
   ),
-  new Product("i2", "Red Apple", "1kg, Price", 4.99, StyleConfig.images.apple),
+  new Product(
+    "i2",
+    "Red Apple",
+    "1kg, Price",
+    4.99,
+    StyleConfig.images.apple,
+    "c1"
+  ),
   new Product(
     "i3",
-    "Organic Banana",
-    "7pcs, Price",
-    4.99,
-    StyleConfig.images.banana
-  ),
-  new Product(
-    "i4",
     "Bell Pepper Red",
     "1kg, Price",
     4.99,
-    StyleConfig.images.redBellPepper
+    StyleConfig.images.redBellPepper,
+    "c1"
   ),
-  new Product("i5", "Ginger", "250gm, Price", 4.99, StyleConfig.images.ginger),
   new Product(
-    "i6",
-    "Organic Banana",
-    "7pcs, Price",
+    "i4",
+    "Ginger",
+    "250gm, Price",
     4.99,
-    StyleConfig.images.banana
+    StyleConfig.images.ginger,
+    "c1"
   ),
   new Product(
-    "i7",
+    "i5",
     "Beef Bone",
     "1kg, Price",
     4.99,
-    StyleConfig.images.beefBone
+    StyleConfig.images.beefBone,
+    "c3"
   ),
   new Product(
-    "i8",
+    "i6",
     "Broiler Chicken",
     "1kg, Price",
     4.99,
-    StyleConfig.images.broilerChicken
+    StyleConfig.images.broilerChicken,
+    "c3"
+  ),
+  new Product(
+    "i7",
+    "Diet Coke",
+    "355ml, Price",
+    1.99,
+    StyleConfig.images.dietCoke,
+    "c6"
+  ),
+  new Product(
+    "i8",
+    "Sprite Can",
+    "325ml, Price",
+    1.5,
+    StyleConfig.images.sprite,
+    "c6"
   ),
   new Product(
     "i9",
-    "Organic Banana",
-    "1kg, Price",
+    "Apple & Grape Juice",
+    "2L, Price",
+    15.99,
+    StyleConfig.images.appleJuice,
+    "c6"
+  ),
+  new Product(
+    "i10",
+    "Orange Juice",
+    "2L, Price",
+    15.99,
+    StyleConfig.images.orangeJuice,
+    "c6"
+  ),
+  new Product(
+    "i11",
+    "Coca Cola Can",
+    "325ml, Price",
     4.99,
-    StyleConfig.images.banana
+    StyleConfig.images.coke,
+    "c6"
+  ),
+  new Product(
+    "i12",
+    "Pepsi Can",
+    "330ml, Price",
+    4.99,
+    StyleConfig.images.pepsi,
+    "c6"
   ),
 ];
 

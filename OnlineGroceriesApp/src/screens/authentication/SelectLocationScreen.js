@@ -39,19 +39,15 @@ const SelectLocationScreen = ({ navigation }) => {
           blurRadius={15}
         />
         <View style={styles.header}>
-          <CustomButton
+          <Icon
+            name="md-chevron-back"
+            size={32}
+            color={StyleConfig.colors.offshadeBlack}
             style={styles.backButton}
-            onPressFeedback="hidden"
-            onSelect={() => {
+            onPress={() => {
               navigation.goBack();
             }}
-          >
-            <Icon
-              name="md-chevron-back"
-              size={32}
-              color={StyleConfig.colors.offshadeBlack}
-            />
-          </CustomButton>
+          />
         </View>
         <View style={styles.topImage}>
           <Image
@@ -123,9 +119,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   backButton: {
-    marginHorizontal: StyleConfig.width / 30,
-    width: StyleConfig.width / 10,
-    justifyContent: "center",
+    margin: StyleConfig.width / 20,
     backgroundColor: "transparent",
   },
   topImage: {

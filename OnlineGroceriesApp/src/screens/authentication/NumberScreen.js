@@ -33,19 +33,15 @@ const NumberScreen = ({ navigation }) => {
           resizeMode="contain"
           blurRadius={15}
         />
-        <CustomButton
+        <Icon
+          name="md-chevron-back"
+          size={32}
+          color={StyleConfig.colors.offshadeBlack}
           style={styles.backButton}
-          onPressFeedback="hidden"
-          onSelect={() => {
+          onPress={() => {
             navigation.goBack();
           }}
-        >
-          <Icon
-            name="md-chevron-back"
-            size={32}
-            color={StyleConfig.colors.offshadeBlack}
-          />
-        </CustomButton>
+        />
         <View style={styles.contentContainer}>
           <View style={styles.captionContainer}>
             <Text style={styles.caption}>Enter your mobile number</Text>
@@ -102,9 +98,7 @@ const styles = StyleSheet.create({
     marginTop: StyleConfig.height / 1.23,
   },
   backButton: {
-    marginHorizontal: StyleConfig.width / 30,
-    width: StyleConfig.width / 10,
-    justifyContent: "center",
+    margin: StyleConfig.width / 20,
     backgroundColor: "transparent",
   },
   contentContainer: {

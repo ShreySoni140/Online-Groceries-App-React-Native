@@ -54,5 +54,11 @@ export default {
     cat4: require("../../assets/images/cat4_bake_snack.png"),
     cat5: require("../../assets/images/cat5_dairy_egg.png"),
     cat6: require("../../assets/images/cat6_bev.png"),
+    dietCoke: require("../../assets/images/dietcoke.png"),
+    sprite: require("../../assets/images/sprite.png"),
+    appleJuice: require("../../assets/images/applejuice.png"),
+    orangeJuice: require("../../assets/images/orangejuice.png"),
+    coke: require("../../assets/images/coke.png"),
+    pepsi: require("../../assets/images/pepsi.png"),
   },
 };

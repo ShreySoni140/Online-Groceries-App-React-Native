@@ -1,0 +1,166 @@
+import React from "react";
+import { Text } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
+import { useSelector } from "react-redux";
+import Tile from "./Tile";
+import Entypo from "react-native-vector-icons/Entypo";
+import CustomButton from "./CustomButton";
+import StyleConfig from "../constants/StyleConfig";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
+
+const ProductList = (props) => {
+  const favoriteProducts = useSelector(
+    (state) => state.products.favoriteProducts
+  );
+
+  const renderProductItem = (itemData) => {
+    const isFavorite = favoriteProducts.some(
+      (product) => product.id === itemData.item.id
+    );
+
+    return (
+      <Tile
+        title={itemData.item.name}
+        image={itemData.item.image}
+        gridItemStyle={styles.gridItemStyle}
+        containerStyle={styles.tileContainerStyle}
+        imageStyle={styles.imageStyle}
+        titleStyle={styles.titleStyle}
+        onSelect={() => {
+          props.navigation.navigate("Main", {
+            screen: "ProductDetail",
+            params: {
+              productId: itemData.item.id,
+              productName: itemData.item.name,
+              isFav: isFavorite,
+            },
+          });
+        }}
+      >
+        <Text style={styles.quantityText}>{itemData.item.quantity}</Text>
+        <View style={styles.priceAddCartContainer}>
+          <Text style={styles.priceText}>${itemData.item.price}</Text>
+          <View style={styles.addCartButtonContainer}>
+            <CustomButton
+              buttonItemStyle={{ borderRadius: 17 }}
+              style={styles.addCartButton}
+            >
+              <Entypo name="plus" size={24} color="white" />
+            </CustomButton>
+          </View>
+        </View>
+      </Tile>
+    );
+  };
+
+  return (
+    <View style={styles.container}>
+      <View style={{ flexDirection: "row" }}>
+        <Ionicons
+          name="md-chevron-back"
+          size={32}
+          color={StyleConfig.colors.offshadeBlack}
+          style={styles.backButton}
+          onPress={() => props.navigation.goBack()}
+        />
+        <View style={styles.headerTitleContainer}>
+          <Text style={styles.headerTitleText}>{props.title}</Text>
+        </View>
+        <FontAwesome
+          name="sliders"
+          size={32}
+          color="black"
+          style={styles.filterButton}
+        />
+      </View>
+      <View style={styles.listContainer}>
+        <FlatList
+          showsVerticalScrollIndicator={false}
+          data={props.listData}
+          renderItem={renderProductItem}
+          numColumns={2}
+        />
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  gridItemStyle: {
+    height: StyleConfig.height / 3.4,
+    marginTop: StyleConfig.height / 70,
+    marginHorizontal: StyleConfig.width / 55,
+  },
+  tileContainerStyle: {
+    borderColor: StyleConfig.colors.borderColor,
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+  },
+  imageStyle: {
+    alignSelf: "center",
+    marginVertical: StyleConfig.height / 60,
+  },
+  titleStyle: {
+    textAlign: "left",
+    marginHorizontal: StyleConfig.width / 30,
+  },
+  quantityText: {
+    marginHorizontal: StyleConfig.width / 30,
+    flex: 1,
+    fontFamily: StyleConfig.fontMedium,
+    fontSize: 14,
+    color: StyleConfig.colors.secondryTextColor2,
+  },
+  priceAddCartContainer: {
+    flexDirection: "row",
+    marginHorizontal: StyleConfig.width / 30,
+    marginBottom: StyleConfig.height / 40,
+  },
+  priceText: {
+    flex: 1,
+    textAlignVertical: "center",
+    fontFamily: StyleConfig.fontRegular,
+    fontSize: 18,
+    color: StyleConfig.colors.offshadeBlack,
+  },
+  addCartButtonContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+  },
+  addCartButton: {
+    borderRadius: 17,
+    justifyContent: "center",
+    width: StyleConfig.width / 10,
+    height: StyleConfig.height / 20,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: StyleConfig.colors.white,
+  },
+  backButton: {
+    margin: StyleConfig.width / 30,
+    backgroundColor: "transparent",
+  },
+  headerTitleContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  headerTitleText: {
+    fontFamily: StyleConfig.fontBold,
+    fontSize: 20,
+    color: StyleConfig.colors.offshadeBlack,
+  },
+  filterButton: {
+    alignSelf: "center",
+    margin: StyleConfig.width / 30,
+  },
+  listContainer: {
+    marginRight: StyleConfig.width / 35,
+    marginLeft: StyleConfig.width / 40,
+    marginBottom: StyleConfig.height / 13,
+  },
+});
+
+export default ProductList;
