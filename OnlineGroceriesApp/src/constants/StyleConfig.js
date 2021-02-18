@@ -23,6 +23,8 @@ export default {
     secondryTextColor: "#828282",
     secondryTextColor2: "#7C7C7C",
     placeholderColor: "#CCC",
+    imgSliderIndicator: "#B3B3B3",
+    reviewStar: "#F3603F",
   },
 
   fontLight: "Gilroy-Light",

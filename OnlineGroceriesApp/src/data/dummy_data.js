@@ -61,7 +61,19 @@ export const PRODUCTS = [
     "7pcs, Price",
     4.99,
     StyleConfig.images.banana,
-    "c1"
+    "c1",
+    [
+      {
+        image: StyleConfig.images.banana,
+      },
+      {
+        image: StyleConfig.images.banana,
+      },
+      {
+        image: StyleConfig.images.banana,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i2",
@@ -69,7 +81,19 @@ export const PRODUCTS = [
     "1kg, Price",
     4.99,
     StyleConfig.images.apple,
-    "c1"
+    "c1",
+    [
+      {
+        image: StyleConfig.images.apple,
+      },
+      {
+        image: StyleConfig.images.apple,
+      },
+      {
+        image: StyleConfig.images.apple,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i3",
@@ -77,7 +101,19 @@ export const PRODUCTS = [
     "1kg, Price",
     4.99,
     StyleConfig.images.redBellPepper,
-    "c1"
+    "c1",
+    [
+      {
+        image: StyleConfig.images.redBellPepper,
+      },
+      {
+        image: StyleConfig.images.redBellPepper,
+      },
+      {
+        image: StyleConfig.images.redBellPepper,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i4",
@@ -85,7 +121,19 @@ export const PRODUCTS = [
     "250gm, Price",
     4.99,
     StyleConfig.images.ginger,
-    "c1"
+    "c1",
+    [
+      {
+        image: StyleConfig.images.ginger,
+      },
+      {
+        image: StyleConfig.images.ginger,
+      },
+      {
+        image: StyleConfig.images.ginger,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i5",
@@ -93,7 +141,19 @@ export const PRODUCTS = [
     "1kg, Price",
     4.99,
     StyleConfig.images.beefBone,
-    "c3"
+    "c3",
+    [
+      {
+        image: StyleConfig.images.beefBone,
+      },
+      {
+        image: StyleConfig.images.beefBone,
+      },
+      {
+        image: StyleConfig.images.beefBone,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i6",
@@ -101,7 +161,19 @@ export const PRODUCTS = [
     "1kg, Price",
     4.99,
     StyleConfig.images.broilerChicken,
-    "c3"
+    "c3",
+    [
+      {
+        image: StyleConfig.images.broilerChicken,
+      },
+      {
+        image: StyleConfig.images.broilerChicken,
+      },
+      {
+        image: StyleConfig.images.broilerChicken,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i7",
@@ -109,7 +181,19 @@ export const PRODUCTS = [
     "355ml, Price",
     1.99,
     StyleConfig.images.dietCoke,
-    "c6"
+    "c6",
+    [
+      {
+        image: StyleConfig.images.dietCoke,
+      },
+      {
+        image: StyleConfig.images.dietCoke,
+      },
+      {
+        image: StyleConfig.images.dietCoke,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i8",
@@ -117,7 +201,19 @@ export const PRODUCTS = [
     "325ml, Price",
     1.5,
     StyleConfig.images.sprite,
-    "c6"
+    "c6",
+    [
+      {
+        image: StyleConfig.images.sprite,
+      },
+      {
+        image: StyleConfig.images.sprite,
+      },
+      {
+        image: StyleConfig.images.sprite,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i9",
@@ -125,7 +221,19 @@ export const PRODUCTS = [
     "2L, Price",
     15.99,
     StyleConfig.images.appleJuice,
-    "c6"
+    "c6",
+    [
+      {
+        image: StyleConfig.images.appleJuice,
+      },
+      {
+        image: StyleConfig.images.appleJuice,
+      },
+      {
+        image: StyleConfig.images.appleJuice,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i10",
@@ -133,7 +241,19 @@ export const PRODUCTS = [
     "2L, Price",
     15.99,
     StyleConfig.images.orangeJuice,
-    "c6"
+    "c6",
+    [
+      {
+        image: StyleConfig.images.orangeJuice,
+      },
+      {
+        image: StyleConfig.images.orangeJuice,
+      },
+      {
+        image: StyleConfig.images.orangeJuice,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i11",
@@ -141,7 +261,19 @@ export const PRODUCTS = [
     "325ml, Price",
     4.99,
     StyleConfig.images.coke,
-    "c6"
+    "c6",
+    [
+      {
+        image: StyleConfig.images.coke,
+      },
+      {
+        image: StyleConfig.images.coke,
+      },
+      {
+        image: StyleConfig.images.coke,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
   new Product(
     "i12",
@@ -149,7 +281,19 @@ export const PRODUCTS = [
     "330ml, Price",
     4.99,
     StyleConfig.images.pepsi,
-    "c6"
+    "c6",
+    [
+      {
+        image: StyleConfig.images.pepsi,
+      },
+      {
+        image: StyleConfig.images.pepsi,
+      },
+      {
+        image: StyleConfig.images.pepsi,
+      },
+    ],
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
   ),
 ];
 

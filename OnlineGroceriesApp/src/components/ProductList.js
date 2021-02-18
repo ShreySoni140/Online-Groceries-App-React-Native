@@ -32,7 +32,6 @@ const ProductList = (props) => {
             screen: "ProductDetail",
             params: {
               productId: itemData.item.id,
-              productName: itemData.item.name,
               isFav: isFavorite,
             },
           });
@@ -56,32 +55,34 @@ const ProductList = (props) => {
 
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: "row" }}>
+      <View style={styles.headerContainer}>
         <Ionicons
           name="md-chevron-back"
           size={32}
           color={StyleConfig.colors.offshadeBlack}
-          style={styles.backButton}
           onPress={() => props.navigation.goBack()}
         />
-        <View style={styles.headerTitleContainer}>
-          <Text style={styles.headerTitleText}>{props.title}</Text>
-        </View>
+        <Text style={styles.headerTitleText}>{props.title}</Text>
         <FontAwesome
           name="sliders"
           size={32}
-          color="black"
-          style={styles.filterButton}
+          color={StyleConfig.colors.offshadeBlack}
         />
       </View>
-      <View style={styles.listContainer}>
-        <FlatList
-          showsVerticalScrollIndicator={false}
-          data={props.listData}
-          renderItem={renderProductItem}
-          numColumns={2}
-        />
-      </View>
+      {props.dataSize > 0 ? (
+        <View style={styles.listContainer}>
+          <FlatList
+            showsVerticalScrollIndicator={false}
+            data={props.listData}
+            renderItem={renderProductItem}
+            numColumns={2}
+          />
+        </View>
+      ) : (
+        <View style={styles.noProductContainer}>
+          <Text style={styles.noProductText}>No Products Available!</Text>
+        </View>
+      )}
     </View>
   );
 };
@@ -138,28 +139,30 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: StyleConfig.colors.white,
   },
-  backButton: {
-    margin: StyleConfig.width / 30,
-    backgroundColor: "transparent",
-  },
-  headerTitleContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+  headerContainer: {
+    flexDirection: "row",
+    padding: StyleConfig.width / 30,
+    justifyContent: "space-between",
   },
   headerTitleText: {
     fontFamily: StyleConfig.fontBold,
     fontSize: 20,
     color: StyleConfig.colors.offshadeBlack,
   },
-  filterButton: {
-    alignSelf: "center",
-    margin: StyleConfig.width / 30,
-  },
   listContainer: {
     marginRight: StyleConfig.width / 35,
     marginLeft: StyleConfig.width / 40,
     marginBottom: StyleConfig.height / 13,
+  },
+  noProductContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  noProductText: {
+    fontFamily: StyleConfig.fontMedium,
+    fontSize: 18,
+    color: StyleConfig.colors.secondryTextColor2,
   },
 });
 
