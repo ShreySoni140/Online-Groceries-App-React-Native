@@ -12,7 +12,6 @@ import {
 import CustomButton from "../../components/CustomButton";
 import Icon from "react-native-vector-icons/Ionicons";
 import StyleConfig from "../../constants/StyleConfig";
-import { ScrollView } from "react-native-gesture-handler";
 
 const SignUpScreen = ({ navigation }) => {
   const [secure, setSecure] = useState(true);
@@ -46,118 +45,115 @@ const SignUpScreen = ({ navigation }) => {
           resizeMode="contain"
           blurRadius={15}
         />
-        <ScrollView>
-          <View style={styles.topImage}>
-            <Image source={StyleConfig.images.logoColor} resizeMode="contain" />
-          </View>
-
-          <View style={styles.contentContainer}>
-            <Text style={styles.caption}>Sign Up</Text>
-            <View style={styles.secondryTextContainer}>
-              <Text style={styles.secondryText}>
-                Enter your credentials to continue
-              </Text>
-            </View>
-            <View style={styles.inputTitleContainer}>
-              <Text style={styles.inputTitle}>Username</Text>
-            </View>
-            <View style={styles.authContainer}>
-              <View style={styles.authInputContainer}>
-                <TextInput
-                  style={styles.authInput}
-                  placeholder="Username"
-                  placeholderTextColor={StyleConfig.colors.placeholderColor}
-                />
-              </View>
-            </View>
-            <View style={styles.inputTitleContainer}>
-              <Text style={styles.inputTitle}>Email</Text>
-            </View>
-            <View style={styles.authContainer}>
-              <View style={styles.authInputContainer}>
-                <TextInput
-                  style={styles.authInput}
-                  placeholder="Email"
-                  placeholderTextColor={StyleConfig.colors.placeholderColor}
-                  keyboardType="email-address"
-                  value={email}
-                  onChangeText={(email) => {
-                    setEmail(email);
-                  }}
-                />
-                {validateEmail(email) ? (
-                  <Icon
-                    name="md-checkmark-sharp"
-                    size={24}
-                    color={StyleConfig.colors.primaryColor}
-                  />
-                ) : null}
-              </View>
-            </View>
-            <View style={styles.inputTitleContainer}>
-              <Text style={styles.inputTitle}>Password</Text>
-            </View>
-            <View style={styles.authContainer}>
-              <View style={styles.authInputContainer}>
-                <TextInput
-                  secureTextEntry={secure}
-                  style={styles.authInput}
-                  placeholder="Password"
-                  placeholderTextColor={StyleConfig.colors.placeholderColor}
-                />
-                <Icon
-                  name={secure ? "md-eye-off-outline" : "md-eye-outline"}
-                  size={24}
-                  color="black"
-                  onPress={() => {
-                    setSecure(!secure);
-                  }}
-                />
-              </View>
-            </View>
-            <View style={styles.legalContainer}>
-              <Text style={styles.legalText}>
-                By continuing you agree to our &nbsp;
-                <TouchableWithoutFeedback>
-                  <Text style={{ color: StyleConfig.colors.primaryColor }}>
-                    Terms of Service
-                  </Text>
-                </TouchableWithoutFeedback>
-                &nbsp; and &nbsp;
-                <TouchableWithoutFeedback>
-                  <Text style={{ color: StyleConfig.colors.primaryColor }}>
-                    Privacy Policy
-                  </Text>
-                </TouchableWithoutFeedback>
-                .
-              </Text>
-            </View>
-          </View>
-          <View style={styles.footer}>
-            <CustomButton
-              title="Sign Up"
-              titleStyle={{ color: StyleConfig.colors.offWhite }}
-              buttonItemStyle={{ flex: 1 }}
-              onSelect={() => {
-                navigation.navigate("LogIn");
-              }}
-            />
-          </View>
-          <View style={styles.logInContainer}>
-            <Text style={styles.logInText}>
-              Already have an account?&nbsp;
-              <TouchableWithoutFeedback
-                onPress={() => {
-                  navigation.navigate("LogIn");
-                }}
-              >
-                <Text style={{ color: StyleConfig.colors.primaryColor }}>
-                  Log In
-                </Text>
-              </TouchableWithoutFeedback>
+        <View style={styles.topImage}>
+          <Image source={StyleConfig.images.logoColor} resizeMode="contain" />
+        </View>
+        <View style={styles.contentContainer}>
+          <Text style={styles.caption}>Sign Up</Text>
+          <View style={styles.secondryTextContainer}>
+            <Text style={styles.secondryText}>
+              Enter your credentials to continue
             </Text>
           </View>
-        </ScrollView>
+          <View style={styles.inputTitleContainer}>
+            <Text style={styles.inputTitle}>Username</Text>
+          </View>
+          <View style={styles.authContainer}>
+            <View style={styles.authInputContainer}>
+              <TextInput
+                style={styles.authInput}
+                placeholder="Username"
+                placeholderTextColor={StyleConfig.colors.placeholderColor}
+              />
+            </View>
+          </View>
+          <View style={styles.inputTitleContainer}>
+            <Text style={styles.inputTitle}>Email</Text>
+          </View>
+          <View style={styles.authContainer}>
+            <View style={styles.authInputContainer}>
+              <TextInput
+                style={styles.authInput}
+                placeholder="Email"
+                placeholderTextColor={StyleConfig.colors.placeholderColor}
+                keyboardType="email-address"
+                value={email}
+                onChangeText={(email) => {
+                  setEmail(email);
+                }}
+              />
+              {validateEmail(email) ? (
+                <Icon
+                  name="md-checkmark-sharp"
+                  size={24}
+                  color={StyleConfig.colors.primaryColor}
+                />
+              ) : null}
+            </View>
+          </View>
+          <View style={styles.inputTitleContainer}>
+            <Text style={styles.inputTitle}>Password</Text>
+          </View>
+          <View style={styles.authContainer}>
+            <View style={styles.authInputContainer}>
+              <TextInput
+                secureTextEntry={secure}
+                style={styles.authInput}
+                placeholder="Password"
+                placeholderTextColor={StyleConfig.colors.placeholderColor}
+              />
+              <Icon
+                name={secure ? "md-eye-off-outline" : "md-eye-outline"}
+                size={24}
+                color="black"
+                onPress={() => {
+                  setSecure(!secure);
+                }}
+              />
+            </View>
+          </View>
+          <View style={styles.legalContainer}>
+            <Text style={styles.legalText}>
+              By continuing you agree to our &nbsp;
+              <TouchableWithoutFeedback>
+                <Text style={{ color: StyleConfig.colors.primaryColor }}>
+                  Terms of Service
+                </Text>
+              </TouchableWithoutFeedback>
+              &nbsp; and &nbsp;
+              <TouchableWithoutFeedback>
+                <Text style={{ color: StyleConfig.colors.primaryColor }}>
+                  Privacy Policy
+                </Text>
+              </TouchableWithoutFeedback>
+              .
+            </Text>
+          </View>
+        </View>
+        <View style={styles.footer}>
+          <CustomButton
+            title="Sign Up"
+            titleStyle={{ color: StyleConfig.colors.offWhite }}
+            buttonItemStyle={{ flex: 1 }}
+            onSelect={() => {
+              navigation.navigate("LogIn");
+            }}
+          />
+        </View>
+        <View style={styles.logInContainer}>
+          <Text style={styles.logInText}>
+            Already have an account?&nbsp;
+            <TouchableWithoutFeedback
+              onPress={() => {
+                navigation.navigate("LogIn");
+              }}
+            >
+              <Text style={{ color: StyleConfig.colors.primaryColor }}>
+                Log In
+              </Text>
+            </TouchableWithoutFeedback>
+          </Text>
+        </View>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
   );

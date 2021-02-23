@@ -1,6 +1,5 @@
 import React from "react";
-import { Image } from "react-native";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import StyleConfig from "../constants/StyleConfig";
 
 const CustomImageSlider = ({ item, imageKey }) => {

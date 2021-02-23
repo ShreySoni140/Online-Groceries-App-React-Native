@@ -12,7 +12,6 @@ import {
 import CustomButton from "../../components/CustomButton";
 import Icon from "react-native-vector-icons/Ionicons";
 import StyleConfig from "../../constants/StyleConfig";
-import { ScrollView } from "react-native-gesture-handler";
 
 const LogInScreen = ({ navigation }) => {
   const [secure, setSecure] = useState(true);
@@ -40,80 +39,77 @@ const LogInScreen = ({ navigation }) => {
           resizeMode="contain"
           blurRadius={15}
         />
-        <ScrollView>
-          <View style={styles.topImage}>
-            <Image source={StyleConfig.images.logoColor} resizeMode="contain" />
-          </View>
-
-          <View style={styles.contentContainer}>
-            <Text style={styles.caption}>Log In</Text>
-            <View style={styles.secondryTextContainer}>
-              <Text style={styles.secondryText}>
-                Enter your emails and password
-              </Text>
-            </View>
-            <View style={styles.inputTitleContainer}>
-              <Text style={styles.inputTitle}>Email</Text>
-            </View>
-            <View style={styles.authContainer}>
-              <View style={styles.authInputContainer}>
-                <TextInput
-                  style={styles.authInput}
-                  placeholder="Email"
-                  placeholderTextColor={StyleConfig.colors.placeholderColor}
-                />
-              </View>
-            </View>
-            <View style={styles.inputTitleContainer}>
-              <Text style={styles.inputTitle}>Password</Text>
-            </View>
-            <View style={styles.authContainer}>
-              <View style={styles.authInputContainer}>
-                <TextInput
-                  secureTextEntry={secure}
-                  style={styles.authInput}
-                  placeholder="Password"
-                  placeholderTextColor={StyleConfig.colors.placeholderColor}
-                />
-                <Icon
-                  name={secure ? "md-eye-off-outline" : "md-eye-outline"}
-                  size={24}
-                  color="black"
-                  onPress={() => {
-                    setSecure(!secure);
-                  }}
-                />
-              </View>
-            </View>
-            <View style={styles.forgotPassContainer}>
-              <Text style={styles.forgotPassText}>Forgot Password?</Text>
-            </View>
-          </View>
-          <View style={styles.footer}>
-            <CustomButton
-              title="Log In"
-              titleStyle={{ color: StyleConfig.colors.offWhite }}
-              buttonItemStyle={{ flex: 1 }}
-              onSelect={() => {
-                navigation.navigate("Main", { screen: "MainTabNavigator" });
-              }}
-            />
-          </View>
-          <View style={styles.signUpContainer}>
-            <Text style={styles.signUpText}>
-              Don’t have an account?&nbsp;
-              <TouchableWithoutFeedback
-                onPress={() => {
-                  navigation.navigate("SignUp");
-                }}
-              >
-                <Text style={{ color: StyleConfig.colors.primaryColor }}>
-                  SignUp
-                </Text>
-              </TouchableWithoutFeedback>
+        <View style={styles.topImage}>
+          <Image source={StyleConfig.images.logoColor} resizeMode="contain" />
+        </View>
+        <View style={styles.contentContainer}>
+          <Text style={styles.caption}>Log In</Text>
+          <View style={styles.secondryTextContainer}>
+            <Text style={styles.secondryText}>
+              Enter your emails and password
             </Text>
           </View>
-        </ScrollView>
+          <View style={styles.inputTitleContainer}>
+            <Text style={styles.inputTitle}>Email</Text>
+          </View>
+          <View style={styles.authContainer}>
+            <View style={styles.authInputContainer}>
+              <TextInput
+                style={styles.authInput}
+                placeholder="Email"
+                placeholderTextColor={StyleConfig.colors.placeholderColor}
+              />
+            </View>
+          </View>
+          <View style={styles.inputTitleContainer}>
+            <Text style={styles.inputTitle}>Password</Text>
+          </View>
+          <View style={styles.authContainer}>
+            <View style={styles.authInputContainer}>
+              <TextInput
+                secureTextEntry={secure}
+                style={styles.authInput}
+                placeholder="Password"
+                placeholderTextColor={StyleConfig.colors.placeholderColor}
+              />
+              <Icon
+                name={secure ? "md-eye-off-outline" : "md-eye-outline"}
+                size={24}
+                color="black"
+                onPress={() => {
+                  setSecure(!secure);
+                }}
+              />
+            </View>
+          </View>
+          <View style={styles.forgotPassContainer}>
+            <Text style={styles.forgotPassText}>Forgot Password?</Text>
+          </View>
+        </View>
+        <View style={styles.footer}>
+          <CustomButton
+            title="Log In"
+            titleStyle={{ color: StyleConfig.colors.offWhite }}
+            buttonItemStyle={{ flex: 1 }}
+            onSelect={() => {
+              navigation.navigate("Main", { screen: "MainTabNavigator" });
+            }}
+          />
+        </View>
+        <View style={styles.signUpContainer}>
+          <Text style={styles.signUpText}>
+            Don’t have an account?&nbsp;
+            <TouchableWithoutFeedback
+              onPress={() => {
+                navigation.navigate("SignUp");
+              }}
+            >
+              <Text style={{ color: StyleConfig.colors.primaryColor }}>
+                SignUp
+              </Text>
+            </TouchableWithoutFeedback>
+          </Text>
+        </View>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
   );

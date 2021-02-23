@@ -1,6 +1,10 @@
 import React from "react";
-import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
+import {
+  StyleSheet,
+  TouchableWithoutFeedback,
+  View,
+  TextInput,
+} from "react-native";
 import StyleConfig from "../constants/StyleConfig";
 import Feather from "react-native-vector-icons/Feather";
 

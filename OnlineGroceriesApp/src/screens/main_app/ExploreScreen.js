@@ -1,6 +1,5 @@
 import React from "react";
-import { FlatList } from "react-native";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, FlatList } from "react-native";
 import SearchBar from "../../components/SearchBar";
 import StyleConfig from "../../constants/StyleConfig";
 import Tile from "../../components/Tile";

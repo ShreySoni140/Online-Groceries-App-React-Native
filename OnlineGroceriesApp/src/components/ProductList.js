@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Text } from "react-native";
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View, Text } from "react-native";
 import Tile from "./Tile";
 import Entypo from "react-native-vector-icons/Entypo";
 import CustomButton from "./CustomButton";
