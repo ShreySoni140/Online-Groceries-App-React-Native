@@ -8,7 +8,8 @@
 4. Open Android Studio. Open AVD Manager and start an emulator. (Or you can connect your phone via USB Cable. Refer to the official docs for instructions for the same [here](https://reactnative.dev/docs/running-on-device))
 5. To run the App, type ```npx react-native run-android```.
 
-## PLEASE NOTE THAT THIS APP MAY HAVE SOME PROBLEMS SOME PROBLEMS RUNNING ON IOS OR THERE MAY BE DIFFERENCE IN HOW SOME COMPONENTS ARE VIEWED IN IOS DUE TO NOT HAVING ACCESS TO IOS RUNNING DEVICE DURING DEVELOPING THE APP
+## IMPORTANT NOTE - 
+THIS APP MAY HAVE SOME PROBLEMS RUNNING ON IOS OR THERE MAY BE DIFFERENCE IN HOW SOME COMPONENTS ARE VIEWED IN IOS DUE TO NOT HAVING ACCESS TO AN IOS RUNNING DEVICE DURING DEVELOPING THE APP
 
 ## External Libraries Used
 
