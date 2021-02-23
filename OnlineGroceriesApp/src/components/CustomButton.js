@@ -23,7 +23,7 @@ const CustomButton = (props) => {
           <Text style={{ ...styles.label, ...props.titleStyle }}>
             {props.title}
           </Text>
-          {props.arrow}
+          {props.child2}
         </View>
       </BtnCmp>
     </View>

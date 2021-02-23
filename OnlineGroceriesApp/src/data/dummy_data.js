@@ -54,6 +54,23 @@ export const CATEGORIES = [
   ),
 ];
 
+export const GROCERY = [
+  new Category(
+    "g1",
+    "Pulses",
+    "#F8A44C26",
+    StyleConfig.colors.white,
+    StyleConfig.images.pulses
+  ),
+  new Category(
+    "g2",
+    "Rice",
+    "#53B17526",
+    StyleConfig.colors.white,
+    StyleConfig.images.rice
+  ),
+];
+
 export const PRODUCTS = [
   new Product(
     "i1",
@@ -73,7 +90,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.banana,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    true,
+    false,
+    false
   ),
   new Product(
     "i2",
@@ -93,7 +113,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.apple,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    true,
+    false,
+    false
   ),
   new Product(
     "i3",
@@ -113,7 +136,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.redBellPepper,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    true,
+    false
   ),
   new Product(
     "i4",
@@ -133,7 +159,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.ginger,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    true,
+    false
   ),
   new Product(
     "i5",
@@ -153,7 +182,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.beefBone,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    false,
+    true
   ),
   new Product(
     "i6",
@@ -173,7 +205,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.broilerChicken,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    false,
+    true
   ),
   new Product(
     "i7",
@@ -193,7 +228,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.dietCoke,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    false,
+    false
   ),
   new Product(
     "i8",
@@ -213,7 +251,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.sprite,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    false,
+    false
   ),
   new Product(
     "i9",
@@ -233,7 +274,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.appleJuice,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    false,
+    false
   ),
   new Product(
     "i10",
@@ -253,7 +297,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.orangeJuice,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    false,
+    false
   ),
   new Product(
     "i11",
@@ -273,7 +320,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.coke,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    false,
+    false
   ),
   new Product(
     "i12",
@@ -293,7 +343,10 @@ export const PRODUCTS = [
         image: StyleConfig.images.pepsi,
       },
     ],
-    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet."
+    "Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthful and varied diet.",
+    false,
+    false,
+    false
   ),
 ];
 

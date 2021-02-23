@@ -50,7 +50,7 @@ const AuthNavigator = () => {
   );
 };
 
-const MainTabNavigator = () => {
+const MainTabNavigator = (props) => {
   const Tab = createMaterialBottomTabNavigator();
 
   return (
@@ -152,8 +152,7 @@ const GroceryNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {/* <Stack.Screen name="OrderAcc" component={OrderAcceptedScreen} /> */}
-        {/* <Stack.Screen name="Auth" component={AuthNavigator} /> */}
+        <Stack.Screen name="Auth" component={AuthNavigator} />
         <Stack.Screen name="Main" component={MainNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -164,7 +163,6 @@ const styles = StyleSheet.create({
   tabLabel: {
     fontFamily: StyleConfig.fontRegular,
     fontSize: 12,
-    color: StyleConfig.colors.offshadeBlack,
   },
 });
 

@@ -7,7 +7,10 @@ class Product {
     image,
     categoryId,
     prodImages,
-    description
+    description,
+    isExclusive,
+    isBestSell,
+    isGrocery
   ) {
     this.id = id;
     this.name = name;
@@ -17,6 +20,9 @@ class Product {
     this.categoryId = categoryId;
     this.prodImages = prodImages;
     this.description = description;
+    this.isExclusive = isExclusive;
+    this.isBestSell = isBestSell;
+    this.isGrocery = isGrocery;
   }
 }
 

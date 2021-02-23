@@ -37,6 +37,13 @@
 		C77A5932822A461992B34F3D /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D05CE69A0DA4F1CB74E9A1A /* Octicons.ttf */; };
 		91BB981867D241A69DCA48C4 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A286C04AED4942E890139591 /* SimpleLineIcons.ttf */; };
 		BA60C417FDF54EB8B8C63C99 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1D27716363243329E54CBEF /* Zocial.ttf */; };
+		708DB9EDDB204EAD8FF5DBB3 /* Aclonica-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A68867FFE41C40F9B5503AF3 /* Aclonica-Regular.ttf */; };
+		CD81704ADE5B4062B6D329D1 /* AirbnbCerealBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76AFF5DE5BE245378591DF8E /* AirbnbCerealBlack.ttf */; };
+		110265ACA6414F45A263208F /* AirbnbCerealBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B10907F3194747F7BDA8E3D1 /* AirbnbCerealBold.ttf */; };
+		DA4AE81200BF4A7FB5C22DEE /* AirbnbCerealBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4646CE134BBF4A8BBA331CB8 /* AirbnbCerealBook.ttf */; };
+		62871045844D4CB195C4498F /* AirbnbCerealExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D88F5DE9C40541B8ADF74F34 /* AirbnbCerealExtraBold.ttf */; };
+		E0B7BED92782482F81C0BA11 /* AirbnbCerealLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEE1E63AA0D74CE494E38B82 /* AirbnbCerealLight.ttf */; };
+		8B488DCAFEA4452588090445 /* AirbnbCerealMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA1E14922834B46A3218D93 /* AirbnbCerealMedium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +100,13 @@
 		8D05CE69A0DA4F1CB74E9A1A /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../assets/fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A286C04AED4942E890139591 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../assets/fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A1D27716363243329E54CBEF /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../assets/fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A68867FFE41C40F9B5503AF3 /* Aclonica-Regular.ttf */ = {isa = PBXFileReference; name = "Aclonica-Regular.ttf"; path = "../assets/fonts/Aclonica-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		76AFF5DE5BE245378591DF8E /* AirbnbCerealBlack.ttf */ = {isa = PBXFileReference; name = "AirbnbCerealBlack.ttf"; path = "../assets/fonts/AirbnbCerealBlack.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B10907F3194747F7BDA8E3D1 /* AirbnbCerealBold.ttf */ = {isa = PBXFileReference; name = "AirbnbCerealBold.ttf"; path = "../assets/fonts/AirbnbCerealBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4646CE134BBF4A8BBA331CB8 /* AirbnbCerealBook.ttf */ = {isa = PBXFileReference; name = "AirbnbCerealBook.ttf"; path = "../assets/fonts/AirbnbCerealBook.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D88F5DE9C40541B8ADF74F34 /* AirbnbCerealExtraBold.ttf */ = {isa = PBXFileReference; name = "AirbnbCerealExtraBold.ttf"; path = "../assets/fonts/AirbnbCerealExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EEE1E63AA0D74CE494E38B82 /* AirbnbCerealLight.ttf */ = {isa = PBXFileReference; name = "AirbnbCerealLight.ttf"; path = "../assets/fonts/AirbnbCerealLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BBA1E14922834B46A3218D93 /* AirbnbCerealMedium.ttf */ = {isa = PBXFileReference; name = "AirbnbCerealMedium.ttf"; path = "../assets/fonts/AirbnbCerealMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +238,13 @@
 				8D05CE69A0DA4F1CB74E9A1A /* Octicons.ttf */,
 				A286C04AED4942E890139591 /* SimpleLineIcons.ttf */,
 				A1D27716363243329E54CBEF /* Zocial.ttf */,
+				A68867FFE41C40F9B5503AF3 /* Aclonica-Regular.ttf */,
+				76AFF5DE5BE245378591DF8E /* AirbnbCerealBlack.ttf */,
+				B10907F3194747F7BDA8E3D1 /* AirbnbCerealBold.ttf */,
+				4646CE134BBF4A8BBA331CB8 /* AirbnbCerealBook.ttf */,
+				D88F5DE9C40541B8ADF74F34 /* AirbnbCerealExtraBold.ttf */,
+				EEE1E63AA0D74CE494E38B82 /* AirbnbCerealLight.ttf */,
+				BBA1E14922834B46A3218D93 /* AirbnbCerealMedium.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -388,6 +409,13 @@
 				C77A5932822A461992B34F3D /* Octicons.ttf in Resources */,
 				91BB981867D241A69DCA48C4 /* SimpleLineIcons.ttf in Resources */,
 				BA60C417FDF54EB8B8C63C99 /* Zocial.ttf in Resources */,
+				708DB9EDDB204EAD8FF5DBB3 /* Aclonica-Regular.ttf in Resources */,
+				CD81704ADE5B4062B6D329D1 /* AirbnbCerealBlack.ttf in Resources */,
+				110265ACA6414F45A263208F /* AirbnbCerealBold.ttf in Resources */,
+				DA4AE81200BF4A7FB5C22DEE /* AirbnbCerealBook.ttf in Resources */,
+				62871045844D4CB195C4498F /* AirbnbCerealExtraBold.ttf in Resources */,
+				E0B7BED92782482F81C0BA11 /* AirbnbCerealLight.ttf in Resources */,
+				8B488DCAFEA4452588090445 /* AirbnbCerealMedium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

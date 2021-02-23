@@ -1,24 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text } from "react-native";
 import { FlatList, StyleSheet, View } from "react-native";
-import { useSelector } from "react-redux";
 import Tile from "./Tile";
 import Entypo from "react-native-vector-icons/Entypo";
 import CustomButton from "./CustomButton";
 import StyleConfig from "../constants/StyleConfig";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
+import FilterModal from "./FilterModal";
 
 const ProductList = (props) => {
-  const favoriteProducts = useSelector(
-    (state) => state.products.favoriteProducts
-  );
+  const [modalVisible, setModalVisible] = useState(false);
 
   const renderProductItem = (itemData) => {
-    const isFavorite = favoriteProducts.some(
-      (product) => product.id === itemData.item.id
-    );
-
     return (
       <Tile
         title={itemData.item.name}
@@ -32,7 +26,6 @@ const ProductList = (props) => {
             screen: "ProductDetail",
             params: {
               productId: itemData.item.id,
-              isFav: isFavorite,
             },
           });
         }}
@@ -67,8 +60,17 @@ const ProductList = (props) => {
           name="sliders"
           size={32}
           color={StyleConfig.colors.offshadeBlack}
+          onPress={() => {
+            setModalVisible(true);
+          }}
         />
       </View>
+      <FilterModal
+        visible={modalVisible}
+        close={() => {
+          setModalVisible(false);
+        }}
+      />
       {props.dataSize > 0 ? (
         <View style={styles.listContainer}>
           <FlatList
@@ -101,6 +103,7 @@ const styles = StyleSheet.create({
   imageStyle: {
     alignSelf: "center",
     marginVertical: StyleConfig.height / 60,
+    flex: 1,
   },
   titleStyle: {
     textAlign: "left",

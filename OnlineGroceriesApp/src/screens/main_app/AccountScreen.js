@@ -22,7 +22,7 @@ const AccountScreen = (props) => {
         buttonItemStyle={{ borderRadius: 0 }}
         style={styles.accMenuItem}
         titleStyle={styles.accMenuItemText}
-        arrow={
+        child2={
           <Ionicons
             name="md-chevron-forward"
             size={24}

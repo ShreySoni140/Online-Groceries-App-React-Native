@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import CustomButton from "../../components/CustomButton";
 import StyleConfig from "../../constants/StyleConfig";
-import { ScrollView } from "react-native-gesture-handler";
 
 const OrderAcceptedScreen = ({ navigation }) => {
   return (
@@ -25,38 +24,34 @@ const OrderAcceptedScreen = ({ navigation }) => {
         resizeMode="contain"
         blurRadius={15}
       />
-      <ScrollView>
-        <View style={styles.topImage}>
-          <Image
-            source={StyleConfig.images.orderAccepted}
-            resizeMode="contain"
-          />
+
+      <View style={styles.topImage}>
+        <Image source={StyleConfig.images.orderAccepted} resizeMode="contain" />
+      </View>
+      <View style={styles.contentContainer}>
+        <Text style={styles.caption}>Your Order has been accepted</Text>
+        <View style={styles.secondryTextContainer}>
+          <Text style={styles.secondryText}>
+            Your order has been placed and is on it’s way to being processed
+          </Text>
         </View>
-        <View style={styles.contentContainer}>
-          <Text style={styles.caption}>Your Order has been accepted</Text>
-          <View style={styles.secondryTextContainer}>
-            <Text style={styles.secondryText}>
-              Your order has been placed and is on it’s way to being processed
-            </Text>
-          </View>
-        </View>
-        <View style={styles.footer}>
-          <CustomButton
-            title="Track Order"
-            titleStyle={{ color: StyleConfig.colors.offWhite }}
-            buttonItemStyle={{ flex: 1 }}
-          />
-        </View>
-        <View style={styles.backHomeContainer}>
-          <TouchableWithoutFeedback
-            onPress={() => {
-              navigation.navigate("Main", { screen: "MainTabNavigator" });
-            }}
-          >
-            <Text style={styles.backHomeText}>Back to home</Text>
-          </TouchableWithoutFeedback>
-        </View>
-      </ScrollView>
+      </View>
+      <View style={styles.footer}>
+        <CustomButton
+          title="Track Order"
+          titleStyle={{ color: StyleConfig.colors.offWhite }}
+          buttonItemStyle={{ flex: 1 }}
+        />
+      </View>
+      <View style={styles.backHomeContainer}>
+        <TouchableWithoutFeedback
+          onPress={() => {
+            navigation.navigate("MainTabNavigator", { screen: "Home" });
+          }}
+        >
+          <Text style={styles.backHomeText}>Back to home</Text>
+        </TouchableWithoutFeedback>
+      </View>
     </View>
   );
 };

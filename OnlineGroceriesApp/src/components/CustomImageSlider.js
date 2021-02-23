@@ -5,14 +5,7 @@ import StyleConfig from "../constants/StyleConfig";
 
 const CustomImageSlider = ({ item, imageKey }) => {
   return (
-    <View
-      style={{
-        width: StyleConfig.width,
-        height: StyleConfig.height / 4,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View style={styles.imageContainer}>
       <Image
         source={item[imageKey]}
         resizeMode="contain"
@@ -22,6 +15,13 @@ const CustomImageSlider = ({ item, imageKey }) => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  imageContainer: {
+    width: StyleConfig.width,
+    height: StyleConfig.height / 4,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
 
 export default CustomImageSlider;

@@ -1,21 +1,16 @@
 import React from "react";
-import {
-  Image,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  View,
-} from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import StyleConfig from "../../constants/StyleConfig";
 
 const SplashScreen = ({ navigation }) => {
+  setTimeout(() => {
+    navigation.replace("GettingStarted");
+  }, 1500);
+
   return (
-    <TouchableWithoutFeedback
-      onPress={() => navigation.navigate("GettingStarted")}
-    >
-      <View style={styles.container}>
-        <Image source={StyleConfig.images.logoMain} />
-      </View>
-    </TouchableWithoutFeedback>
+    <View style={styles.container}>
+      <Image source={StyleConfig.images.logoMain} />
+    </View>
   );
 };
 
