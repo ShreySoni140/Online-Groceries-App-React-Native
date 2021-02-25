@@ -8,7 +8,7 @@
 4. Open Android Studio. Open AVD Manager and start an emulator. (Or you can connect your phone via USB Cable. Refer to the official docs for instructions for the same [here](https://reactnative.dev/docs/running-on-device))
 5. To run the App, type ```npx react-native run-android```.
 
-## External Libraries Used
+## External Modules Used
 
 1. redux
 2. react-redux
@@ -27,6 +27,6 @@
 15. react-native-picker-select
 16. react-native-flatlist-slider
 
-## Single command for installing all the external libraries
+## Single command for installing all the external modules
 
 ```npm install --save redux react-redux @react-navigation/native @react-navigation/stack @react-navigation/material-bottom-tabs @react-navigation/drawer react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view react-native-paper react-native-vector-icons react-native-flags react-native-picker-select react-native-flatlist-slider```
